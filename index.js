@@ -78,7 +78,14 @@ async function run() {
             }
             const result = await ordersCollection.updateOne(query,approved)
             res.json(result)
-            console.log(id)
+        })
+
+        //POST API for add an new offer
+        app.post('/addOffer', async(req,res)=>{
+            const data = req.body;
+            console.log(data)
+            const result = await offersCollection.insertOne(data);
+            res.json(result)
         })
 
 
