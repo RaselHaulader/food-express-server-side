@@ -6,7 +6,7 @@ require('dotenv').config()
 const cors = require('cors')
 const ObjectId = require('mongodb').ObjectId;
 
-// middle wire 
+// middle   wire 
 app.use(cors())
 app.use(express.json())
 /* 
